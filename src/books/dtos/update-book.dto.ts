@@ -1,0 +1,7 @@
+export class UpdateBookDto {
+  title?: string;
+  authorId?: string;
+  publicationYear?: string;
+  genre?: string;
+  availableCopies?: number;
+}
