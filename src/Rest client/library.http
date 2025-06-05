@@ -1,9 +1,0 @@
-###Get
-GET http://localhost:3000/books
-
-###Get single book
-
-GET http://localhost:3000/books/1
-
-
-

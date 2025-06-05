@@ -1,0 +1,30 @@
+###Get all books
+GET http://localhost:3000/books
+
+###Get single book
+GET http://localhost:3000/books/319589cf-ac85-48a4-bc3d-9d1b2e16c7c3
+
+###Post create a new book
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title": "Richest Man in Babylon",
+  "authorId": "3",
+  "publicationYear": 2019,
+  "genre": "Lifestyle",
+  "availableCopies": 20
+}
+
+###Put update a book
+PUT  http://localhost:3000/books/5746c53f-462c-4419-8b4e-bae8efcdef18
+Content-Type: application/json
+
+{
+  "genre": "Personal Finance",
+  "availableCopies" : 145
+}
+
+###DELETE book by id
+DELETE http://localhost:3000/books/51e378d2-fbc7-4aca-96a1-682dc1c22ec7
+

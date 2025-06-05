@@ -1,7 +1,8 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { Book, CreateBookDto } from './dtos/create-book.dtos';
 import { v4 as uuidv4 } from 'uuid';
 import { UpdateBookDto } from './dtos/update-book.dto';
+import { Book } from './interfaces/book.interface';
+import { CreateBookDto } from './dtos/create-book.dtos';
 
 @Injectable()
 export class BooksService {
@@ -49,8 +50,8 @@ export class BooksService {
   //create a new book
   create(creatBookDto: CreateBookDto): Book {
     const newBook: Book = {
-      id: uuidv4(),
       ...creatBookDto,
+      id: uuidv4(),
     };
     this.books.push(newBook);
     return newBook;

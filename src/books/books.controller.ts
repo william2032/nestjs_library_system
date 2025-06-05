@@ -20,16 +20,16 @@ export class BooksController {
    * Get /books
    */
   @Get()
-  findAll(): [] {
+  findAll(): Book[] {
     return this.booksService.findAll();
   }
 
   /**
-   * GET /book/:id
+   * GET /books/:id
    * @param id
    */
   @Get(':id')
-  findOne(@Param('id') id: string): Book {
+  findOne(@Param('id') id: string): any {
     return this.booksService.findOne(id);
   }
 
@@ -37,15 +37,14 @@ export class BooksController {
    * POST /books
    */
   @Post()
-  create(@Body() createBookDto: CreateBookDto) {
+  create(@Body() createBookDto: CreateBookDto): Book {
     return this.booksService.create(createBookDto);
   }
 
   /**
-   * Put /books -create new book
+   * PUT /books/:id - update existing book
    * @param id
    * @param updateBookDto
-   * @Body
    */
   @Put(':id')
   update(@Param('id') id: string, @Body() updateBookDto: UpdateBookDto): Book {
@@ -53,10 +52,10 @@ export class BooksController {
   }
 
   /**
-   * DELETE /books/id
+   * DELETE /books/:id
    */
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    this.booksService.remove(id);
+  remove(@Param('id') id: string): void {
+    return this.booksService.remove(id);
   }
 }

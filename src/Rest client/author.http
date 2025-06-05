@@ -1,0 +1,26 @@
+###Get all authors
+GET http://localhost:3000/authors
+
+###Get single authors
+GET http://localhost:3000/authors/2
+
+###Post create a new author
+POST http://localhost:3000/authors
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "Elvis Elliot"
+}
+
+###Put update a author
+PUT  http://localhost:3000/authors/1
+Content-Type: application/json
+
+{
+  "name": "Joy Williams"
+}
+
+###DELETE member by id
+DELETE http://localhost:3000/authors/4bd3f4b7-d08c-4c7a-ad68-28500e9ddf73
+

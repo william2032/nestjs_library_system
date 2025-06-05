@@ -1,0 +1,26 @@
+###Get all members
+GET http://localhost:3000/members
+
+###Get single member
+GET http://localhost:3000/members/c2122ce8-05b6-49c0-8507-2ca5b732dc54
+
+###Post create a new member
+POST http://localhost:3000/members
+Content-Type: application/json
+
+{
+  "name": "Elvis Elliot",
+  "email": "elliotelvis@example.com"
+}
+
+###Put update a member
+PUT  http://localhost:3000/members/fd591c5f-5fdb-4c9a-8aaf-e200006eb312
+Content-Type: application/json
+
+{
+  "name": "Joy Williams"
+}
+
+###DELETE book by id
+DELETE http://localhost:3000/members/c2122ce8-05b6-49c0-8507-2ca5b732dc54
+
